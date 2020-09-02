@@ -1,0 +1,9 @@
+<div>
+  <app-search (movieListEmitter)="passedMovieList($event)" (selectedMovieDetailsEmitter)="passedSelectedMovieDescription($event)"></app-search>
+  
+  <div class="row">
+    <app-lists [movieList]="getMovieListFromSearchQuery"></app-lists>
+   
+  </div>
+
+</div>

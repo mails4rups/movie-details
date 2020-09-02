@@ -1,0 +1,13 @@
+<div class="col-3 menu">
+    <ul>
+      <li *ngFor="let item of movieList" (click) = "getSelectedMovieDetails(item)">{{item.original_title}}</li>
+      
+    </ul>
+  </div>
+  <div class="col-9">
+    <div *ngIf="movieList != ''">
+
+      <app-details [movieDescription]="selectedMovieDescription"></app-details>
+    </div>
+  </div>
+  <app-loader [isLoading]="showLoader"></app-loader>

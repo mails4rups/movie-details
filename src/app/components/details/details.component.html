@@ -1,0 +1,27 @@
+<div *ngIf="movieDescription.title != undefined && movieDescription != {}">
+    <div class="col-9">
+    <div class="row">
+        <div class="col-6">
+            <h1>{{movieDescription.title}}</h1><br>
+            <span>Release Date : {{movieDescription.release_date}}</span><br>
+            <span>Rating : {{movieDescription.vote_average}} out of 10</span><br>
+            <span>Total Vote : {{movieDescription.vote_count}}</span><br>
+            <span>Popularity : {{movieDescription.popularity}}</span><br>
+            <span>Language : {{movieDescription.original_language}}</span><br>
+            <span *ngIf="movieDescription.adult == true">Adult : <span [ngStyle]="{'color': red}">Yes</span></span><br>
+            <span *ngIf="movieDescription.adult == false">Adult : <span [ngStyle]="{'color': green}">No</span></span><br>
+
+        </div>
+        <div class="col-6">
+            <img *ngIf="movieDescription.poster_path != null" [src]="'https://image.tmdb.org/t/p/w500/'+movieDescription.poster_path" alt="{{movieDescription.title}}" height="300" id="movieImg"/>
+            <img *ngIf="movieDescription.poster_path == null" src="assets/default-image.jpg" alt="{{movieDescription.title}}" height="300" id="movieImg"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p>{{movieDescription.overview}}</p>
+
+        </div>
+    </div>
+    </div>
+</div>

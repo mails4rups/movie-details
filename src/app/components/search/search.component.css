@@ -1,0 +1,17 @@
+#searchBar{
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 0px;
+    margin-right: 16px;
+    font-size: 17px;
+    width: 720px;
+  }
+
+  #searchBtn{
+    padding: 6px;
+    border: none;
+    margin-top: 0px;
+    margin-left: 5px;
+    font-size: 17px;
+  }
